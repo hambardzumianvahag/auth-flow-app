@@ -1,0 +1,88 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #3b5998;
+}
+.register {
+  border: 1px solid rgb(196, 189, 189);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px 40px;
+  width: 600px;
+}
+
+.title {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.error {
+  color: red;
+  text-align: center;
+}
+.inputField {
+  height: 40px;
+  width: 350px;
+  border: 1px solid rgb(196, 189, 189);
+  margin: 5px 0 !important;
+  padding: 5px;
+  font-size: 18px;
+}
+.container {
+  padding: 0 10px;
+  margin: 5px 0 !important; 
+  width: 100%;
+  border-bottom: 1px solid rgb(196, 189, 189);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonDiv {
+  margin: 10px 0 !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 5px;
+  align-items: center;
+}
+.button {
+  width: 100%;
+}
+.already,
+.termsDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 5px 10px;
+}
+.terms {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.text {
+  color: #3b5998;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .title {
+    padding: 0;
+  }
+  .register {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .inputField {
+    margin: 8px 0;
+    width: calc(100% - 10px);
+  }
+  .container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .buttonDiv {
+    width: 100%;
+  }
+}

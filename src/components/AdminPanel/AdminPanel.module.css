@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b5998;
+  min-height: 100vh;
+  color: black;
+}
+.panel {
+  background-color: white;
+  padding: 30px 30px 20px 30px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.panel h3 {
+  padding: 10px 0;
+  text-align: center;
+}
+.panel p {
+  padding: 10px 0;
+}
+.panel button {
+  margin: 25px 0 0 0;
+}
+.chooseDiv {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnsDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #3b5998;
+}
+.reset {
+  border: 1px solid rgb(196, 189, 189);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px 40px;
+  width: 400px;
+  text-align: center;
+}
+.title {
+  padding: 10px 0;
+}
+.text {
+  padding: 0 0 10px 0;
+}
+.inputField {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(196, 189, 189);
+  margin: 5px 0 !important;
+  padding: 5px;
+  font-size: 18px;
+}
+.line {
+  margin: 10px 0;
+}
+.register {
+  color: #1976d2;
+  cursor: pointer;
+}
+.login {
+  color: #1976d2;
+  cursor: pointer;
+}
+.btnDiv {
+  margin: 20px 0 !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.btn {
+  width: 100%;
+}
+.loginDiv {
+  padding: 10px 0 0 0;
+}
+@media (max-width: 768px) {
+  .reset{
+    width: 95%;
+    margin: 0 auto;
+  }
+}

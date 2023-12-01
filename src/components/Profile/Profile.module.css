@@ -1,0 +1,39 @@
+.profile {
+  color: white;
+  min-width: 100vh;
+}
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border: 2px solid white;
+}
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.header ul li {
+  cursor: pointer;
+}
+.main {
+  height: 80vh;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.footer {
+  height: 10vh;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+}
+.visible {
+  background-color: #3b5998;
+}
+.hidden {
+  background-color: black;
+}

@@ -1,0 +1,81 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #3b5998;
+}
+.login {
+  border: 1px solid rgb(196, 189, 189);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px 40px;
+  width: 600px;
+}
+.title {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.error {
+  color: red;
+  text-align: center;
+}
+.container {
+  padding: 10px;
+  margin: 5px 0 !important;
+  width: 100%;
+  border-bottom: 1px solid rgb(196, 189, 189);
+}
+.inputField {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(196, 189, 189);
+  margin: 5px 0 !important;
+  padding: 5px;
+  font-size: 18px;
+}
+.forgotDiv,
+.signupDiv {
+  padding: 10px;
+}
+.forgotText {
+  font-size: 17px;
+  cursor: pointer;
+  color: #1976d2;
+}
+.btnDiv {
+  margin: 10px 0 !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 5px;
+  align-items: center;
+}
+.btn {
+  width: 100%;
+}
+.signup {
+  cursor: pointer;
+  color: #1976d2;
+  font-size: 17px;
+}
+@media (max-width: 768px) {
+  .title {
+    padding: 0;
+  }
+  .login {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .inputField {
+    margin: 8px 0;
+    width: calc(100% - 10px);
+  }
+  .container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .btnDiv {
+    width: 100%;
+  }
+}
