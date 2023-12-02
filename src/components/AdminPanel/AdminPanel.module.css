@@ -8,25 +8,33 @@
 }
 .panel {
   background-color: white;
-  padding: 30px 30px 20px 30px;
+  padding: 20px;
   font-size: 20px;
   border-radius: 8px;
+  width: 600px;
 }
 .panel h3 {
-  padding: 10px 0;
   text-align: center;
 }
 .panel p {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .panel button {
-  margin: 25px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .chooseDiv {
-  padding: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3b5998;
+  margin: 10px 0;
+}
+.chooseColor {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.title {
+  text-align: center;
 }
 .btnsDiv {
   display: flex;

@@ -50,21 +50,24 @@ const Admin = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>{item.surname}</td>
-                  <td>{item.email}</td>
-                  <td>
-                    <Button
-                      onClick={() => handleSeeMore(item)}
-                      variant="outlined"
-                    >
-                      See More
-                    </Button>
-                  </td>
-                </tr>
-              ))}
+              {data.map(
+                (item) =>
+                  item.email !== "admin@gmail.com" && (
+                    <tr key={item.id}>
+                      <td>{item.name}</td>
+                      <td>{item.surname}</td>
+                      <td>{item.email}</td>
+                      <td>
+                        <Button
+                          onClick={() => handleSeeMore(item)}
+                          variant="outlined"
+                        >
+                          See More
+                        </Button>
+                      </td>
+                    </tr>
+                  )
+              )}
             </tbody>
           </table>
         )}

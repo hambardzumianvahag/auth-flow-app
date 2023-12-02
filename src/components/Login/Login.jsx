@@ -22,6 +22,7 @@ const Login = ({ setIsAuthenticated }) => {
           navigate("/auth-flow-app/admin");
         } else {
           navigate("/auth-flow-app/profile");
+          setIsAuthenticated(true);
         }
         setError("");
         setValues({ email: "", password: "" });
@@ -70,7 +71,10 @@ const Login = ({ setIsAuthenticated }) => {
           <div className={styles.signupDiv}>
             <span>
               Don't Have An Account?{" "}
-              <span className={styles.signup} onClick={() => navigate("/auth-flow-app")}>
+              <span
+                className={styles.signup}
+                onClick={() => navigate("/auth-flow-app")}
+              >
                 Sign Up
               </span>
             </span>

@@ -41,21 +41,28 @@ const Profile = () => {
   return (
     <div className={styles.profile}>
       <div
-        className={`${styles.header}`}
-        style={{ backgroundColor: userData.header }}
+        style={{
+          backgroundColor: userData.header,
+          display: userData.headerDisplay,
+        }}
       >
-        <h3>My header</h3>
-        <ul>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>Help</li>
-          <li>Profile</li>
-          <li onClick={() => navigate("/auth-flow-app/login")}>Log Out</li>
-        </ul>
+        <div className={`${styles.header}`}>
+          <h3>My header</h3>
+          <ul>
+            <li>About us</li>
+            <li>Contact</li>
+            <li>Help</li>
+            <li>Profile</li>
+            <li onClick={() => navigate("/auth-flow-app/login")}>Log Out</li>
+          </ul>
+        </div>
       </div>
       <div
         className={`${styles.main}`}
-        style={{ backgroundColor: userData.main }}
+        style={{
+          backgroundColor: userData.main,
+          display: userData.mainDisplay,
+        }}
       >
         <h1>My main</h1>
         {userData ? (
@@ -67,10 +74,14 @@ const Profile = () => {
         ) : null}
       </div>
       <div
-        className={`${styles.footer} `}
-        style={{ backgroundColor: userData.footer }}
+        style={{
+          backgroundColor: userData.footer,
+          display: userData.footerDisplay,
+        }}
       >
-        <h3>My footer</h3>
+        <div className={`${styles.footer} `}>
+          <h3>My footer</h3>
+        </div>
       </div>
     </div>
   );

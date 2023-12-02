@@ -15,6 +15,9 @@ const Register = () => {
     header: "#3b5998",
     main: "#3b5998",
     footer: "#3b5998",
+    headerDisplay: "block",
+    mainDisplay: "block",
+    footerDisplay: "block",
   });
 
   const userInfo = collection(db, "users");
@@ -59,6 +62,9 @@ const Register = () => {
           header: user.header,
           footer: user.footer,
           main: user.main,
+          headerDisplay: user.headerDisplay,
+          mainDisplay: user.mainDisplay,
+          footerDisplay: user.footerDisplay,
         });
         navigate("/auth-flow-app/login");
         setUser({
@@ -70,6 +76,9 @@ const Register = () => {
           header: "#3b5998",
           main: "#3b5998",
           footer: "#3b5998",
+          headerDisplay: "block",
+          mainDisplay: "block",
+          footerDisplay: "block",
         });
       } catch (error) {
         console.log(error);
@@ -139,7 +148,15 @@ const Register = () => {
               className={styles.terms}
               onClick={() => setIsChecked(!isChecked)}
             >
-              I Agree with the Terms & Conditions
+              I Agree with the{" "}
+              <Link
+                className={styles.text}
+                to="https://help.instagram.com/581066165581870"
+                target="_blank"
+              >
+                {" "}
+                Terms & Conditions{" "}
+              </Link>
             </span>
           </div>
           <div className={styles.buttonDiv}>

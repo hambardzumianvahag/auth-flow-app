@@ -25,11 +25,19 @@ const Layout = () => {
             />
           }
         />
-        <Route path="/auth-flow-app/profile" element={<Profile />} />
+        {isAuthenticated && (
+          <Route path="auth-flow-app/profile" element={<Profile />} />
+        )}
+        {/* <Route path="/auth-flow-app/profile" element={<Profile />} /> */}
         <Route path="/auth-flow-app/reset" element={<Reset />} />
-        {/* {isAuthenticated && <Route path="/admin" element={<Admin />} />} */}
-        <Route path="/auth-flow-app/admin" element={<Admin />} />
-        <Route path="/auth-flow-app/admin-panel" element={<AdminPanel />} />
+        {isAuthenticated && (
+          <Route path="auth-flow-app/admin" element={<Admin />} />
+        )}
+        {/* <Route path="/auth-flow-app/admin" element={<Admin />} /> */}
+        {isAuthenticated && (
+          <Route path="auth-flow-app/admin-panel" element={<AdminPanel />} />
+        )}
+        {/* <Route path="/auth-flow-app/admin-panel" element={<AdminPanel />} /> */}
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
