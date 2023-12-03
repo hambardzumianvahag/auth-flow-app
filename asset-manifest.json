@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/auth-flow-app/static/css/main.944bacb0.css",
-    "main.js": "/auth-flow-app/static/js/main.26671272.js",
+    "main.css": "/auth-flow-app/static/css/main.75f0f41c.css",
+    "main.js": "/auth-flow-app/static/js/main.f2c1acb0.js",
     "index.html": "/auth-flow-app/index.html",
-    "main.944bacb0.css.map": "/auth-flow-app/static/css/main.944bacb0.css.map",
-    "main.26671272.js.map": "/auth-flow-app/static/js/main.26671272.js.map"
+    "main.75f0f41c.css.map": "/auth-flow-app/static/css/main.75f0f41c.css.map",
+    "main.f2c1acb0.js.map": "/auth-flow-app/static/js/main.f2c1acb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.944bacb0.css",
-    "static/js/main.26671272.js"
+    "static/css/main.75f0f41c.css",
+    "static/js/main.f2c1acb0.js"
   ]
 }
