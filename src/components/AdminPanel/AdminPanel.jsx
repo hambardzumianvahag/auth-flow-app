@@ -15,11 +15,11 @@ const AdminPanel = () => {
   const [footerDisplay, setFooterDisplay] = useState(user.headerDisplay);
   const navigate = useNavigate();
 
-  const updateColors = async () => {
+  const updateData = async () => {
     try {
       const userId = user.id;
-      const userDocRef = doc(collection(db, "users"), userId);
-      await updateDoc(userDocRef, {
+      const userDoc = doc(collection(db, "users"), userId);
+      await updateDoc(userDoc, {
         header: header,
         main: main,
         footer: footer,
@@ -29,25 +29,10 @@ const AdminPanel = () => {
       });
       navigate("/auth-flow-app/admin");
     } catch (error) {
-      console.error("Error updating colors:", error);
+      console.log("Error: ", error);
     }
   };
 
-  const handleCheckboxChange = (settingType) => {
-    switch (settingType) {
-      case "header":
-        setHeaderDisplay(headerDisplay === "none" ? "block" : "none");
-        break;
-      case "main":
-        setMainDisplay(mainDisplay === "none" ? "block" : "none");
-        break;
-      case "footer":
-        setFooterDisplay(footerDisplay === "none" ? "block" : "none");
-        break;
-      default:
-        break;
-    }
-  };
   useEffect(() => {
     if (user) {
       setHeaderDisplay(user.headerDisplay);
@@ -55,10 +40,11 @@ const AdminPanel = () => {
       setFooterDisplay(user.footerDisplay);
     }
   }, [user]);
+
   return (
     <div className={styles.main}>
       <div className={styles.panel}>
-        <h3>AdminPanel</h3>
+        <h3>Admin Panel</h3>
         {user && (
           <>
             <p>Name: {user.name}</p>
@@ -72,7 +58,11 @@ const AdminPanel = () => {
                 <input
                   type="checkbox"
                   checked={headerDisplay === "none"}
-                  onChange={() => handleCheckboxChange("header")}
+                  onChange={() =>
+                    setHeaderDisplay(
+                      headerDisplay === "none" ? "block" : "none"
+                    )
+                  }
                 />
                 <div className={styles.chooseColor}>
                   <label>Choose a Color</label>
@@ -89,7 +79,9 @@ const AdminPanel = () => {
                 <input
                   type="checkbox"
                   checked={mainDisplay === "none"}
-                  onChange={() => handleCheckboxChange("main")}
+                  onChange={() =>
+                    setMainDisplay(mainDisplay === "none" ? "block" : "none")
+                  }
                 />
                 <div className={styles.chooseColor}>
                   <label>Choose a Color</label>
@@ -106,7 +98,11 @@ const AdminPanel = () => {
                 <input
                   type="checkbox"
                   checked={footerDisplay === "none"}
-                  onChange={() => handleCheckboxChange("footer")}
+                  onChange={() =>
+                    setFooterDisplay(
+                      footerDisplay === "none" ? "block" : "none"
+                    )
+                  }
                 />
                 <div className={styles.chooseColor}>
                   <label>Choose a Color</label>
@@ -127,7 +123,7 @@ const AdminPanel = () => {
           >
             Back
           </Button>
-          <Button variant="contained" onClick={updateColors}>
+          <Button variant="contained" onClick={updateData}>
             Update
           </Button>
         </div>

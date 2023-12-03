@@ -48,12 +48,12 @@ const Register = () => {
     } else {
       setError("");
       try {
-        const userCredential = await createUserWithEmailAndPassword(
+        const userData = await createUserWithEmailAndPassword(
           auth,
           user.email,
           user.password
         );
-        const { uid } = userCredential.user;
+        const { uid } = userData.user;
         await addDoc(userInfo, {
           uid: uid,
           name: user.name,

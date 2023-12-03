@@ -14,13 +14,14 @@ const Profile = () => {
   });
   const navigate = useNavigate();
   const { currentUser } = useAuth();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const userId = currentUser?.uid;
         if (userId) {
-          const querySnapshot = await getDocs(collection(db, "users"));
-          const fetchedData = querySnapshot.docs.map((doc) => ({
+          const userData = await getDocs(collection(db, "users"));
+          const fetchedData = userData.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
           }));
@@ -32,7 +33,7 @@ const Profile = () => {
           }
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.log("Error: ", error);
       }
     };
     fetchData();

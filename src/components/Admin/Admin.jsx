@@ -18,10 +18,9 @@ const Admin = () => {
         });
         setData(fetchArr);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.log("Error: ", error);
       }
     };
-
     fetchData();
   }, []);
 
