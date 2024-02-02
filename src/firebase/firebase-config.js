@@ -14,13 +14,13 @@ import { useEffect, useState } from "react";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAsoA6hlbR_rJgj8eIx268SBCLzteOSkFs",
-  authDomain: "auth-flow-app-bcbac.firebaseapp.com",
-  projectId: "auth-flow-app-bcbac",
-  storageBucket: "auth-flow-app-bcbac.appspot.com",
-  messagingSenderId: "290255199438",
-  appId: "1:290255199438:web:6d08d5a87d12363e47049f",
-  measurementId: "G-23N48SPX6J"
+  apiKey: "AIzaSyAg0Wdo_s5YHP-yA3aNYf61iHqImVaROgQ",
+  authDomain: "auth-flow-app-9023b.firebaseapp.com",
+  projectId: "auth-flow-app-9023b",
+  storageBucket: "auth-flow-app-9023b.appspot.com",
+  messagingSenderId: "726382979191",
+  appId: "1:726382979191:web:680c789a80999c1362be72",
+  measurementId: "G-C6LZDGPF9Y"
 };
 
 // Initialize Firebase
